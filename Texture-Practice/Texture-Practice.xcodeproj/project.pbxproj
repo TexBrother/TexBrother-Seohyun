@@ -18,6 +18,9 @@
 		92511B7826C3F91F00A540CB /* TestNodeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92511B7726C3F91F00A540CB /* TestNodeController.swift */; };
 		92511B7B26C404C100A540CB /* LoginNodeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92511B7A26C404C100A540CB /* LoginNodeController.swift */; };
 		92511B7F26C4050400A540CB /* LoginNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92511B7E26C4050400A540CB /* LoginNode.swift */; };
+		92511B8426CD295500A540CB /* AppleMusicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92511B8326CD295500A540CB /* AppleMusicViewController.swift */; };
+		92511B8626CD298300A540CB /* MusicCellNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92511B8526CD298300A540CB /* MusicCellNode.swift */; };
+		92A46CAA26CD3877005D64D8 /* AppStoreTodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A46CA926CD3877005D64D8 /* AppStoreTodayViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +38,9 @@
 		92511B7726C3F91F00A540CB /* TestNodeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestNodeController.swift; sourceTree = "<group>"; };
 		92511B7A26C404C100A540CB /* LoginNodeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginNodeController.swift; sourceTree = "<group>"; };
 		92511B7E26C4050400A540CB /* LoginNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginNode.swift; sourceTree = "<group>"; };
+		92511B8326CD295500A540CB /* AppleMusicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleMusicViewController.swift; sourceTree = "<group>"; };
+		92511B8526CD298300A540CB /* MusicCellNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicCellNode.swift; sourceTree = "<group>"; };
+		92A46CA926CD3877005D64D8 /* AppStoreTodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStoreTodayViewController.swift; sourceTree = "<group>"; };
 		A97982494225A61921065450 /* Pods-Texture-Practice.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Texture-Practice.debug.xcconfig"; path = "Target Support Files/Pods-Texture-Practice/Pods-Texture-Practice.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -88,6 +94,7 @@
 		92511B5B26C2D60500A540CB /* Texture-Practice */ = {
 			isa = PBXGroup;
 			children = (
+				92511B8026CD28EC00A540CB /* SeminarExample */,
 				92511B7926C4047200A540CB /* KaKao */,
 				92511B7026C3ED5700A540CB /* QuickExample */,
 				92511B5C26C2D60500A540CB /* AppDelegate.swift */,
@@ -133,6 +140,32 @@
 				92511B7A26C404C100A540CB /* LoginNodeController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		92511B8026CD28EC00A540CB /* SeminarExample */ = {
+			isa = PBXGroup;
+			children = (
+				92511B8226CD292900A540CB /* Nodes */,
+				92511B8126CD290B00A540CB /* ViewControllers */,
+			);
+			path = SeminarExample;
+			sourceTree = "<group>";
+		};
+		92511B8126CD290B00A540CB /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				92511B8326CD295500A540CB /* AppleMusicViewController.swift */,
+				92A46CA926CD3877005D64D8 /* AppStoreTodayViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		92511B8226CD292900A540CB /* Nodes */ = {
+			isa = PBXGroup;
+			children = (
+				92511B8526CD298300A540CB /* MusicCellNode.swift */,
+			);
+			path = Nodes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -248,12 +281,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92A46CAA26CD3877005D64D8 /* AppStoreTodayViewController.swift in Sources */,
 				92511B6126C2D60500A540CB /* ViewController.swift in Sources */,
 				92511B7F26C4050400A540CB /* LoginNode.swift in Sources */,
 				92511B5D26C2D60500A540CB /* AppDelegate.swift in Sources */,
 				92511B7626C3F90F00A540CB /* TestCellNode.swift in Sources */,
 				92511B7B26C404C100A540CB /* LoginNodeController.swift in Sources */,
+				92511B8626CD298300A540CB /* MusicCellNode.swift in Sources */,
 				92511B7826C3F91F00A540CB /* TestNodeController.swift in Sources */,
+				92511B8426CD295500A540CB /* AppleMusicViewController.swift in Sources */,
 				92511B7426C3F65B00A540CB /* SingleScreenVC.swift in Sources */,
 				92511B5F26C2D60500A540CB /* SceneDelegate.swift in Sources */,
 			);
