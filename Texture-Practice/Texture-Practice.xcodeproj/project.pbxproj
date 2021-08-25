@@ -21,6 +21,9 @@
 		92511B8426CD295500A540CB /* AppleMusicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92511B8326CD295500A540CB /* AppleMusicViewController.swift */; };
 		92511B8626CD298300A540CB /* MusicCellNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92511B8526CD298300A540CB /* MusicCellNode.swift */; };
 		92A46CAA26CD3877005D64D8 /* AppStoreTodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A46CA926CD3877005D64D8 /* AppStoreTodayViewController.swift */; };
+		92EE81C926D6525700FEAF90 /* AppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92EE81C826D6525700FEAF90 /* AppModel.swift */; };
+		92EE81CB26D652E600FEAF90 /* AppRankingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92EE81CA26D652E600FEAF90 /* AppRankingVC.swift */; };
+		92EE81CD26D6531200FEAF90 /* AppRankingCellNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92EE81CC26D6531200FEAF90 /* AppRankingCellNode.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +44,9 @@
 		92511B8326CD295500A540CB /* AppleMusicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleMusicViewController.swift; sourceTree = "<group>"; };
 		92511B8526CD298300A540CB /* MusicCellNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicCellNode.swift; sourceTree = "<group>"; };
 		92A46CA926CD3877005D64D8 /* AppStoreTodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStoreTodayViewController.swift; sourceTree = "<group>"; };
+		92EE81C826D6525700FEAF90 /* AppModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppModel.swift; sourceTree = "<group>"; };
+		92EE81CA26D652E600FEAF90 /* AppRankingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRankingVC.swift; sourceTree = "<group>"; };
+		92EE81CC26D6531200FEAF90 /* AppRankingCellNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRankingCellNode.swift; sourceTree = "<group>"; };
 		A97982494225A61921065450 /* Pods-Texture-Practice.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Texture-Practice.debug.xcconfig"; path = "Target Support Files/Pods-Texture-Practice/Pods-Texture-Practice.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -145,6 +151,7 @@
 		92511B8026CD28EC00A540CB /* SeminarExample */ = {
 			isa = PBXGroup;
 			children = (
+				92EE81C726D6521500FEAF90 /* Model */,
 				92511B8226CD292900A540CB /* Nodes */,
 				92511B8126CD290B00A540CB /* ViewControllers */,
 			);
@@ -156,6 +163,7 @@
 			children = (
 				92511B8326CD295500A540CB /* AppleMusicViewController.swift */,
 				92A46CA926CD3877005D64D8 /* AppStoreTodayViewController.swift */,
+				92EE81CA26D652E600FEAF90 /* AppRankingVC.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -164,8 +172,17 @@
 			isa = PBXGroup;
 			children = (
 				92511B8526CD298300A540CB /* MusicCellNode.swift */,
+				92EE81CC26D6531200FEAF90 /* AppRankingCellNode.swift */,
 			);
 			path = Nodes;
+			sourceTree = "<group>";
+		};
+		92EE81C726D6521500FEAF90 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				92EE81C826D6525700FEAF90 /* AppModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -286,10 +303,13 @@
 				92511B7F26C4050400A540CB /* LoginNode.swift in Sources */,
 				92511B5D26C2D60500A540CB /* AppDelegate.swift in Sources */,
 				92511B7626C3F90F00A540CB /* TestCellNode.swift in Sources */,
+				92EE81CB26D652E600FEAF90 /* AppRankingVC.swift in Sources */,
+				92EE81CD26D6531200FEAF90 /* AppRankingCellNode.swift in Sources */,
 				92511B7B26C404C100A540CB /* LoginNodeController.swift in Sources */,
 				92511B8626CD298300A540CB /* MusicCellNode.swift in Sources */,
 				92511B7826C3F91F00A540CB /* TestNodeController.swift in Sources */,
 				92511B8426CD295500A540CB /* AppleMusicViewController.swift in Sources */,
+				92EE81C926D6525700FEAF90 /* AppModel.swift in Sources */,
 				92511B7426C3F65B00A540CB /* SingleScreenVC.swift in Sources */,
 				92511B5F26C2D60500A540CB /* SceneDelegate.swift in Sources */,
 			);

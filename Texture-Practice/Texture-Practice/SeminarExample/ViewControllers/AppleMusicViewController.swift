@@ -37,11 +37,11 @@ final class AppleMusicViewController: ASDKViewController<ASCollectionNode> {
     override init() {
         let flowlayout = UICollectionViewFlowLayout()
         super.init(node: ASCollectionNode(collectionViewLayout: flowlayout))
-        self.node.backgroundColor = .white
+        self.node.backgroundColor = .black
         self.node.dataSource = self
         self.node.delegate = self
     }
-    
+
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -72,9 +72,12 @@ extension AppleMusicViewController: ASCollectionDelegate {
         itemWidth -= 15*3
         itemWidth *= 0.5
         
-        return ASSizeRange(min: .zero,
-                           max: .init(width: itemWidth, height: .infinity))
+        return ASSizeRange(min: CGSize(width: itemWidth, height: 205),
+                           max: CGSize(width: itemWidth, height: 205))
     }
+//    func collectionNode(_ collectionNode: ASCollectionNode, willDisplayItemWith node: ASCellNode) {
+//        node.backgroundColor = .black
+//    }
 }
 extension AppleMusicViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
@@ -83,4 +86,5 @@ extension AppleMusicViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 11
     }
+    
 }

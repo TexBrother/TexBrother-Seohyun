@@ -33,20 +33,20 @@ final class MusicCellNode: ASCellNode {
         super.init()
         self.automaticallyManagesSubnodes = true
         self.selectionStyle = .none
-        self.backgroundColor = .white
+        self.backgroundColor = .red
         self.imageNode.image = UIImage(named: image)
         self.titleNode.attributedText = NSAttributedString(
             string: title,
             attributes: [
                 .font: UIFont.systemFont(ofSize: 11),
-                .foregroundColor: UIColor.black
+                .foregroundColor: UIColor.white
             ]
         )
         self.singerNode.attributedText = NSAttributedString(
             string: singer,
             attributes: [
                 .font: UIFont.systemFont(ofSize: 10),
-                .foregroundColor: UIColor.black
+                .foregroundColor: UIColor.white
             ]
         )
     }
@@ -59,34 +59,38 @@ final class MusicCellNode: ASCellNode {
     
     // MARK: - Layout
     
-    override func layoutSpecThatFits(_ constrainedSize: ASSizeRange) -> ASLayoutSpec {
-        return ASInsetLayoutSpec(
-            insets: UIEdgeInsets(top: 34, left: 15, bottom: 34, right: 15),
-            child: self.contentLayoutSpec()
+    func musicInfoLayout() -> ASLayoutSpec {
+
+        // 제목 - 가수
+        let textSpec = ASStackLayoutSpec(
+            direction: .vertical,
+            spacing: 3.0,
+            justifyContent: .start,
+            alignItems: .stretch,
+            children: [
+                self.titleNode,
+                self.singerNode
+            ]
         )
-    }
-    
-    private func contentLayoutSpec() -> ASLayoutSpec {
+        
         return ASStackLayoutSpec(
             direction: .vertical,
             spacing: 4.0,
             justifyContent: .start,
             alignItems: .stretch,
             children: [
-                self.imageLayoutSpec().styled {
-                    $0.flexBasis = ASDimension(unit: .fraction, value: 0.8)
-                },
-                self.titleNode.styled {
-                    $0.flexBasis = ASDimension(unit: .fraction, value: 0.1)
-                },
-                self.singerNode.styled {
-                    $0.flexBasis = ASDimension(unit: .fraction, value: 0.1)
-                }
+                self.imageNode,
+                textSpec
             ]
         )
     }
     
-    private func imageLayoutSpec() -> ASLayoutSpec {
-        return ASRatioLayoutSpec(ratio: 1.0, child: self.imageNode)
+    override func layoutSpecThatFits(_ constrainedSize: ASSizeRange) -> ASLayoutSpec {
+        let musicInfoLayout = self.musicInfoLayout()
+        let insets = UIEdgeInsets(top: 6, left: 6, bottom: 5, right: 6)
+        return ASInsetLayoutSpec(
+            insets: insets,
+            child: musicInfoLayout
+        )
     }
 }
