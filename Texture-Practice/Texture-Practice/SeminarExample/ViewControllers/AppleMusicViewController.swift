@@ -11,6 +11,8 @@ import UIKit
 final class AppleMusicViewController: ASDKViewController<ASCollectionNode> {
     
     // MARK: Properties
+    
+    /// 이거 구조체로 바꾸기
     var images: [String] = [
         "musicAlbum1",
         "musicAlbum2",
@@ -36,6 +38,7 @@ final class AppleMusicViewController: ASDKViewController<ASCollectionNode> {
     
     override init() {
         let flowlayout = UICollectionViewFlowLayout()
+        /// 여기서 padding 설정
         super.init(node: ASCollectionNode(collectionViewLayout: flowlayout))
         self.node.backgroundColor = .black
         self.node.dataSource = self
